@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+html {
+   background: url(vincent-guth-182001.jpg) no-repeat center center fixed;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+ }
