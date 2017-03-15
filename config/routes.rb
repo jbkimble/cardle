@@ -1,10 +1,8 @@
 Rails.application.routes.draw do
-  root to: "dashboard#index"
+  root to: "welcome#index"
 
   get '/signup', to: 'users#new'
-  post '/signup', to: 'users#create'
-
-  resources :users, only: [:show, :index]
+  resources :users, only: [:show, :index, :create]
 
 
   get '/login', to: 'sessions#new'
