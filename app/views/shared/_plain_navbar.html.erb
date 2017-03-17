@@ -3,3 +3,13 @@
     <a href="/" class="brand-logo center indigo-text text-lighten-5">Cardle</a>
   </div>
 </nav>
+
+<% flash.each do |type, message| %>
+  <%= binding.pry %>
+  <script>
+  // Materialize.toast(message, displayLength, className, completeCallback);
+  $(function() {
+      Materialize.toast("<%= message %>", 10000);
+    });
+  </script>
+<% end %>

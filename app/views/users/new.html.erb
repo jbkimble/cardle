@@ -1,5 +1,13 @@
 <%= render partial: "shared/plain_navbar" %>
 
+<% @user.errors.full_messages.each do |message| %>
+  <script>
+    $(function() {
+        Materialize.toast("<%= message %>", 10000);
+      });
+  </script>
+<% end %>
+
 <div class="container">
 
   <h1>Signup!</h1>
