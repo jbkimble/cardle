@@ -45,6 +45,7 @@ group :development, :test do
   gem 'factory_girl_rails' #creating items for tests
   gem 'launchy'
   gem 'pry'
+  gem 'selenium-webdriver'
 end
 
 group :development do
