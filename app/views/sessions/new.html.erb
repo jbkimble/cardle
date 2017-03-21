@@ -1,0 +1,54 @@
+<%= render partial: "shared/plain_navbar" %>
+
+<div class="container center-align">
+  <div class="row"><div class="col s12 m12 l12"></div></div>
+  <div class="row"><div class="col s1 m2 l2"></div>
+
+  <div class="col s10 m7 l8">
+    <div class="card-panel rounded-corners purple darken-1">
+      <div class="row"><div class="col s12 m12 l12"></div></div>
+      <div class="row"><div class="col s12 m12 l12"></div></div>
+      <div class="row"><div class="col s12 m12 l12"></div></div>
+      <h3 class="center-align indigo-text text-lighten-5"><br> <strong> Access</strong> <br> <div id="media-1">Great Information</div></h3>
+      <!-- <p>Knowledge, awareness, organization, growth, information</p> -->
+      <!-- <h3 class="center-align indigo-text text-lighten-5"><br> Sign In For <br> Knowledge</h3> -->
+
+      <div class="row"><div class="col s12 m12 l12"></div></div>
+
+        <%= form_tag :login do %>
+          <div class="row">
+            <div class="col s2 m2 l2"></div>
+            <div class="col s8 m8 l8">
+              <%= text_field_tag :email, "", class: 'validate center-align', id: 'email', type:'text', placeholder: 'Email' %>
+
+              <div class="row"><div class="col s12 m12 l12"></div></div>
+              <%= password_field_tag :password, "", class: 'validate center-align', id: 'password', type:'text', placeholder: 'Password' %>
+
+              <div class="row"><div class="col s12 m12 l12"></div></div>
+              <div class="row"><div class="col s12 m12 l12"></div></div>
+              <%= submit_tag "Login", class:"waves-effect waves-light btn-large" %>
+            </div>
+            <div class="col s2 m2 l2"></div>
+          </div>
+        <% end %>
+        <div class="row"><div class="col s12 m12 l12"></div></div>
+        <div class="row"><div class="col s12 m12 l12"></div></div>
+    </div>
+  </div>
+      <div class="col s1 m2 l2"></div>
+  </div>
+
+</div>
+
+<script>
+$(document).ready(function(){
+  var textArea = document.getElementById('media-1');
+  textArea.innerHtml = "banana";
+  var impressiveStuff = ['Knowledge', 'Awareness', 'Organization', 'Growth', 'Information']
+  for (var i = 0; i < impressiveStuff.length; i++) {
+    // setTimeout(3000);
+    textArea.innerHtml = impressiveStuff[i];
+  }
+});
+      
+</script>
