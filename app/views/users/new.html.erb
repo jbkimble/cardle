@@ -8,28 +8,44 @@
   </script>
 <% end %>
 
-<div class="container">
+<div class="container center-align">
+  <div class="row">
+    <div class="col s12 m12 l12"></div>
+  </div>
 
-  <h1>Signup!</h1>
+  <div class="row">
+    <div class="col s1 m2 l2"></div>
+<div class="col s10 m7 l8">
 
-  <%= form_for @user do |f| %>
+       <div class="card-panel rounded-corners purple darken-1">
+         <h2 class="center-align indigo-text text-lighten-5">Sign Up</h2>
 
-    <%= f.label :first_name %>
-    <%= f.text_field :first_name %> <br><br>
+          <%= form_for @user do |f| %>
+            <div class="row">
+                <div class="col s2 m2 l2"></div>
+                <div class="col s8 m8 l8">
+                  <%= f.text_field :first_name, class: 'validate center-align', id: 'first_name', type:'text', placeholder: 'First Name'%> <br><br>
 
-    <%= f.label :last_initial %>
-    <%= f.text_field :last_initial %> <br><br>
+                  <%= f.text_field :last_initial, class: 'validate center-align', id: 'last_initial', type:'text', placeholder: 'Last Initial' %> <br><br>
 
-    <%= f.label :email %>
-    <%= f.text_field :email %> <br><br>
+                  <%= f.text_field :email, class: 'validate center-align', id: 'email', type:'text', placeholder: 'Email' %> <br><br>
+                  <label for="email" data-error="wrong" data-success="right"></label>
 
-    <%= f.label :password %>
-    <%= f.password_field :password %> <br><br>
+                  <%= f.password_field :password, class: 'validate center-align', id: 'password', type:'text', placeholder: 'Password' %> <br><br>
 
-    <%= f.label :password_confirmation, "Password Confirmation"%>
-    <%= f.password_field :password_confirmation %><br><br>
+                  <%= f.password_field :password_confirmation, class: 'validate center-align', id: 'password_confirmation', type:'text', placeholder: 'Password Confirmation' %><br><br>
 
-    <%= f.submit "Create Account" %>
+                  <%= f.submit "Create Account*", class:"waves-effect waves-light btn-large" %>
+                </div>
+                    <div class="col s2 m2 l2"></div>
+            </div>
 
-  <% end %>
+          <% end %>
+          <!-- <p>*Your name will also be entered to win a raffle for <br> cupcakes due to be held on July 17, 2045</p> -->
+          <!-- <p>*I agree to a wide variety of legal treaties, consequences, and ramifications that I am not fully aware of. I fully accept they may come to haunt me and my kin for generations to come</p> -->
+          <p class="indigo-text text-lighten-5" id="disclaimer">*awesome people only</p>
+        </div>
+      </div>
+  </div>
+
 </div>
