@@ -14,7 +14,8 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to dashboard_path
     else
-      redirect_to signup_path
+      # redirect_to signup_path
+      render :new
     end
   end
 

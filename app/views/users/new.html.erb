@@ -1,13 +1,5 @@
 <%= render partial: "shared/plain_navbar" %>
 
-<% @user.errors.full_messages.each do |message| %>
-  <script>
-    $(function() {
-        Materialize.toast("<%= message %>", 10000);
-      });
-  </script>
-<% end %>
-
 <div class="container center-align">
   <div class="row">
     <div class="col s12 m12 l12"></div>
@@ -47,5 +39,15 @@
         </div>
       </div>
   </div>
+
+  <% if @user.errors.any? %>
+  <% @user.errors.full_messages.each do |msg| %>
+    <script>
+    $(function() {
+        Materialize.toast("<%= msg %>", 10000);
+      });
+    </script>
+  <% end %>
+<% end %>
 
 </div>

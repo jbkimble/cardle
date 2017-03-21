@@ -5,11 +5,11 @@ class SessionsController < ApplicationController
   def create
     @user = User.find_by(email: params[:email])
     if @user && @user.authenticate(params[:password])
-      flash[:success] = "Successfully logged in!"
+      flash[:success] = "Successfully logged in #{@user.first_name}.  Welcome back to Cardle!"
       session[:user_id] = @user.id
       redirect_to dashboard_path
     else
-      flash[:failure] = "Something went wrong!"
+      flash[:failure] = "Login failed, please re-enter your information"
       render :new
     end
   end
