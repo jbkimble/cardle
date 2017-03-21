@@ -1,4 +1,4 @@
-<%= render partial: "shared/navbar" %>
+<%= render partial: "shared/plain_navbar" %>
 
 <div class="welcome-background">
 
@@ -6,15 +6,22 @@
     <div class="row">
     </div>
     <div class="row">
-    </div>
+    <div class="col m1 l1"></div>
+    <div class="col s12 m10 l10">
     <h1 class="indigo-text text-lighten-5">Welcome To <strong> Cardle </strong></h1>
     <h4 class="indigo-text text-lighten-5">The elite <strong>information</strong> management system.</h4>
+    <div class="row"></div>
     <div class="row">
+      <a class="waves-effect waves-light btn-large" href="/login" id="login-button">Login</a>
+      <a class="waves-effect waves-light btn-large" href="/signup">Sign Up <i class="material-icons right">thumb_up</i></a>
     </div>
-    <div class="row">
-      <a class="waves-effect waves-light btn" href="/login">Login</a>
-      <a class="waves-effect waves-light btn" href="/signup">Sign Up <i class="material-icons right">thumb_up</i></a>
+
+
     </div>
+    <div class="col m1 l1"></div>
+    </div>
+    </div>
+
     <div class="row">
     </div>
   </div>
